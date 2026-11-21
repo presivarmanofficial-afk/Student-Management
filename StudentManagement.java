@@ -13,8 +13,6 @@ public class StudentManagement {
     static final File DATA = new File("data/students");
     static final File BACKUP = new File("backups");
 
-    // ================= INITIALIZATION =================
-
     static void initialize() {
         DATA.mkdirs();
         BACKUP.mkdirs();
@@ -89,8 +87,6 @@ public class StudentManagement {
         return load(file);
     }
 
-    // ================= LOGIN =================
-
     static boolean login() {
         System.out.println("\n================================");
         System.out.println("     COLLEGE ADMIN LOGIN");
@@ -110,8 +106,6 @@ public class StudentManagement {
 
         return false;
     }
-
-    // ================= ADD STUDENT =================
 
     static void addStudent() throws IOException {
 
@@ -160,7 +154,6 @@ public class StudentManagement {
         System.out.println("Student Registered Successfully!");
     }
 
-    // ================= VIEW STUDENT =================
 
     static void displayStudent(Properties p) {
 
@@ -191,7 +184,6 @@ public class StudentManagement {
         showAttendance(p);
     }
 
-    // ================= VIEW ALL STUDENTS =================
 
     static void viewAllStudents() throws IOException {
 
@@ -219,7 +211,6 @@ public class StudentManagement {
         }
     }
 
-    // ================= SEARCH STUDENT =================
 
     static void searchStudent() throws IOException {
 
@@ -234,8 +225,6 @@ public class StudentManagement {
 
         displayStudent(p);
     }
-
-    // ================= UPDATE STUDENT =================
 
     static void updateStudent() throws IOException {
 
@@ -280,8 +269,6 @@ public class StudentManagement {
         System.out.println("Student Updated Successfully!");
     }
 
-    // ================= DELETE STUDENT =================
-
     static void deleteStudent() {
 
         String reg = input("Register Number: ");
@@ -304,8 +291,6 @@ public class StudentManagement {
             System.out.println("Deletion Cancelled.");
         }
     }
-
-    // ================= ATTENDANCE =================
 
     static void markAttendance() throws IOException {
 
@@ -392,7 +377,6 @@ public class StudentManagement {
             System.out.println("Attendance Status: Below 75%");
     }
 
-    // ================= ACADEMIC MANAGEMENT =================
 
     static void updateSemester() throws IOException {
 
@@ -461,7 +445,6 @@ public class StudentManagement {
         }
     }
 
-    // ================= PERFORMANCE REPORT =================
 
     static void performanceReport() throws IOException {
 
@@ -498,7 +481,6 @@ public class StudentManagement {
         showAttendance(p);
     }
 
-    // ================= BACKUP =================
 
     static void backupRecords() throws IOException {
 
@@ -528,7 +510,6 @@ public class StudentManagement {
         System.out.println("Location: " + backupFolder.getPath());
     }
 
-    // ================= MAIN MENU =================
 
     static void menu() {
 
@@ -633,7 +614,6 @@ public class StudentManagement {
         }
     }
 
-    // ================= MAIN METHOD =================
 
     public static void main(String[] args) {
 
